@@ -2,6 +2,7 @@ import { checkLines } from './../src/project.js';
 import { splitSentences } from './../src/project.js';
 import { countVowels } from './../src/project.js';
 import { countWordsEndingE } from './../src/project.js';
+import { updateVowelCount } from './../src/project.js';
 
 describe('Haiku', function() {
   let reusableText = "Haikus are easy.\nBut sometimes they don't make sense.\nRefrigerator.";
@@ -15,7 +16,7 @@ describe('Haiku', function() {
   });
 
   it('should count the number of vowels or vowel pairs in each sentence', function() {
-    expect(countVowels(reusableText)).toEqual([5,11,5]);
+    expect(countVowels(reusableText)).toEqual([6,11,5]);
   });
 
   it('should count the number of instances that a word ends with e in each sentence', function() {
@@ -23,6 +24,6 @@ describe('Haiku', function() {
   });
 
   it('should subtract number of words that end in e from the number of vowels in the sentence', function() {
-    expect(updateVowelCount(reusableText)).toEqual([4,10,5]);
+    expect(updateVowelCount(reusableText)).toEqual([5,10,5]);
   });
 });
