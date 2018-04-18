@@ -15,11 +15,11 @@ describe('Haiku', function() {
     expect(splitSentences(reusableText).length).toEqual(3);
   });
 
-  it('should count the number of vowels or vowel pairs in each sentence', function() {
+  it('should count the number of vowels, vowel pairs, and qualifying ys in each sentence', function() {
     expect(countVowels(reusableText)).toEqual([6,11,5]);
   });
 
-  it('should count the number of instances that a word ends with e in each sentence', function() {
+  it('should count the number of instances that a word ends with e, but not le, in each sentence', function() {
     expect(countWordsEndingE(reusableText)).toEqual([1,1,0]);
   });
 
