@@ -13,7 +13,7 @@ export function countVowels(text) {
   let countArray = [];
 
   for (let i = 0; i < sentenceArray.length; i++) {
-    countArray.push(sentenceArray[i].match(/[aeiou]+/gi).length);
+    countArray.push(sentenceArray[i].match(/[aeiou]+(?=)|.y/gi).length);
   }
   return countArray;
 }
@@ -31,4 +31,16 @@ export function countWordsEndingE(text){
     }
   }
   return countArray;
+}
+
+export function updateVowelCount(text) {
+  let sentenceArray = splitSentences(text);
+  let vowelCount = countVowels(text);
+  let endineCount = countWordsEndingE(text);
+  let updatedVowels = [];
+
+  for (var i = 0; i < sentenceArray.length; i++) {
+    updatedVowels.push(vowelCount[i] - endineCount[i]);
+  }
+  return updatedVowels;
 }
