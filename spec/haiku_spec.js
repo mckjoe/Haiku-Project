@@ -1,5 +1,7 @@
 import { checkLines } from './../src/project.js';
 import { splitSentences } from './../src/project.js';
+import { countVowels } from './../src/project.js';
+
 describe('Haiku', function() {
   let reusableText = "Haikus are easy.\nBut sometimes they don't make sense.\nRefrigerator.";
 
