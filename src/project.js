@@ -13,7 +13,7 @@ export function countVowels(text) {
   let countArray = [];
 
   for (let i = 0; i < sentenceArray.length; i++) {
-    countArray.push(sentenceArray[i].match(/[aeiou]+(?=)|.y/gi).length);
+    countArray.push(sentenceArray[i].match(/[aeu]+|i|[cts]ia+|e[^o]\W|[ou]+/gi).length);
   }
   return countArray;
 }
