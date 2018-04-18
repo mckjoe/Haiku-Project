@@ -17,3 +17,8 @@ export function countVowels(text) {
   }
   return countArray;
 }
+
+
+export function countWordsEndingE(text){
+  console.log(text);
+}
