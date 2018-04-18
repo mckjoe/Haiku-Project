@@ -25,7 +25,7 @@ export function countWordsEndingE(text){
 
   for (let i = 0; i < sentenceArray.length; i++) {
     if (sentenceArray[i].match(/[a-z]+e\s/gi) !== null) {
-      countArray.push(sentenceArray[i].match(/[a-z]+e\s/gi).length);
+      countArray.push(sentenceArray[i].match(/[a-z]+[^l]e\s/gi).length);
     } else {
       countArray.push(0);
     }
