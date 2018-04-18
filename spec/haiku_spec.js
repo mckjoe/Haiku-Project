@@ -22,4 +22,7 @@ describe('Haiku', function() {
     expect(countWordsEndingE(reusableText)).toEqual([1,1,0]);
   });
 
+  it('should subtract number of words that end in e from the number of vowels in the sentence', function() {
+    expect(updateVowelCount(reusableText)).toEqual([4,10,5]);
+  });
 });
