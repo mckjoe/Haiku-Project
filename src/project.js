@@ -20,5 +20,15 @@ export function countVowels(text) {
 
 
 export function countWordsEndingE(text){
-  console.log(text);
+  let sentenceArray = splitSentences(text);
+  let countArray = [];
+
+  for (let i = 0; i < sentenceArray.length; i++) {
+    if (sentenceArray[i].match(/[a-z]+e\s/gi) !== null) {
+      countArray.push(sentenceArray[i].match(/[a-z]+e\s/gi).length);
+    } else {
+      countArray.push(0);
+    }
+  }
+  return countArray;
 }
