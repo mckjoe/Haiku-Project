@@ -11,5 +11,8 @@ describe('Haiku', function() {
     expect(splitSentences(reusableText).length).toEqual(3);
   });
 
+  it('should count the number of vowels in each sentence', function() {
+    expect(countVowels(reusableText)).toEqual([7,11,5]);
+  });
 
 });
