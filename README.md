@@ -12,7 +12,7 @@ This application will check whether a poem is in fact a haiku.
  Behavior | Input | Output
  -------- | ----- | ------
 Verifies that poem has three lines | "Haikus are easy.<br>But sometimes they don't make sense.<br> Refrigerator." | True
-Counts vowels for each word | "Haikus are easy.<br>But sometimes they don't make sense.<br> Refrigerator." | [3, 2, 3 ]<br>[1, 4, 2, 2, 2]<br>[5]
+Counts vowels for each sentence | "Haikus are easy.<br>But sometimes they don't make sense.<br> Refrigerator." | [7,11,5]
 Applies exceptions to each word count | "Haikus are easy.<br>But sometimes they don't make sense.<br> Refrigerator." | [2, 1, 2 ]<br>[1, 3, 1, 1, 1]<br>[5]
 Generate haiku from text entry | "Haikus are easy.<br>But sometimes they don't make sense.<br> Refrigerator." | [2, 1, 2 ]<br>[1, 3, 1, 1, 1]<br>[5]
 
