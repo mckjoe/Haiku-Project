@@ -19,11 +19,11 @@ describe('Haiku', function() {
     expect(countVowels(reusableText)).toEqual([6,11,5]);
   });
 
-  it('should count the number of instances that a word ends with e, but not le, in each sentence', function() {
-    expect(countWordsEndingE(reusableText)).toEqual([1,1,0]);
+  it('should count the number of instances that a word ends with ie, e, but not le, in each sentence', function() {
+    expect(countWordsEndingE(reusableText)).toEqual([1,2,0]);
   });
 
   it('should subtract number of words that end in e from the number of vowels in the sentence', function() {
-    expect(updateVowelCount(reusableText)).toEqual([5,10,5]);
+    expect(updateVowelCount(reusableText)).toEqual([5,9,5]);
   });
 });
