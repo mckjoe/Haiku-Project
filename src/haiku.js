@@ -3,7 +3,6 @@ class Haiku {
     this.lines = text.split(/\n/g);
     this.vowelCounts = [];
     this.pass = false;
-    this.exclusions = [];
   }
 
   countVowels() {
@@ -23,7 +22,19 @@ class Haiku {
       this.vowelCounts[i] = this.vowelCounts[i] - exclusionCounts[i];
     }
   }
-
+  
+  checkPass() {
+    const passingCounts = [5, 7, 5];
+    let count = 0;
+    for (var i = 0; i < this.vowelCounts.length; i++) {
+      if (this.vowelCounts[i] === passingCounts[i]) {
+        count += 1;
+      }
+    }
+    if (count === 3) {
+      this.pass = true;
+    }
+  }
 }
 
 export { Haiku };
