@@ -6,11 +6,11 @@ class Haiku {
   }
 
   countVowels() {
-    this.lines.forEach(function(line) {
-      //test if scope changes in forEach function
-      this.vowelCounts.push(line.match(/[aeu]+|i|[cts]ia+|e[^o]\W|[ou]+/gi).length);
-    });
+    for (let i = 0; i < this.lines.length; i++) {
+      this.vowelCounts.push(this.lines[i].match(/[aeu]+|i|[cts]ia+|e[^o]\W|[ou]+/gi).length);
+    }
   }
+
 }
 
 export { Haiku };
