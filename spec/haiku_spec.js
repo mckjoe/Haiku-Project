@@ -3,6 +3,7 @@ import { splitSentences } from './../src/project.js';
 import { countVowels } from './../src/project.js';
 import { countWordsEndingE } from './../src/project.js';
 import { updateVowelCount } from './../src/project.js';
+import { validateText }  from './../src/project.js';
 
 describe('Haiku', function() {
   let reusableText = "Haikus are easy.\nBut sometimes they don't make sense.\nRefrigerator.";
@@ -28,6 +29,6 @@ describe('Haiku', function() {
   });
 
   it('should check text for unwanted charactors', function() {
-    expect(checkText(reusableText)).toEqual(true);
+    expect(validateText(reusableText)).toEqual(false);
   });
 });

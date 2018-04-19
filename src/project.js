@@ -44,3 +44,9 @@ export function updateVowelCount(text) {
   }
   return updatedVowels;
 }
+
+export function validateText(text) {
+  if(text.match(/[^a-z-.,:;!?\s]/gi) !== null){
+    return false;
+  }
+}
