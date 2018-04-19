@@ -33,6 +33,8 @@ describe('Haiku', function() {
   });
 
   it('should determine if a poem is a Haiku', function() {
+    testHaiku.filterExclusions();
+    testHaiku.checkPass();
     expect(testHaiku.pass).toEqual(true);
   });
 
