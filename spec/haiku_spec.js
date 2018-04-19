@@ -26,4 +26,8 @@ describe('Haiku', function() {
   it('should subtract number of words that end in e from the number of vowels in the sentence', function() {
     expect(updateVowelCount(reusableText)).toEqual([5,9,5]);
   });
+
+  it('should check text for unwanted charactors', function() {
+    expect(checkText(reusableText)).toEqual(true);
+  });
 });
