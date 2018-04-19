@@ -1,22 +1,22 @@
-export function checkLines(text) {
-  let newlineCount = text.match(/.\n./g).length;
-  return newlineCount;
-}
+// export function checkLines(text) {
+//   let newlineCount = text.match(/.\n./g).length;
+//   return newlineCount;
+// }
 
-export function splitSentences(text) {
-  let sentenceArray = text.split(/\n/g);
-  return sentenceArray;
-}
+// export function splitSentences(text) {
+//   let sentenceArray = text.split(/\n/g);
+//   return sentenceArray;
+// }
 
-export function countVowels(text) {
-  let sentenceArray = splitSentences(text);
-  let countArray = [];
-
-  for (let i = 0; i < sentenceArray.length; i++) {
-    countArray.push(sentenceArray[i].match(/[aeu]+|i|[cts]ia+|e[^o]\W|[ou]+/gi).length);
-  }
-  return countArray;
-}
+// export function countVowels(text) {
+//   let sentenceArray = splitSentences(text);
+//   let countArray = [];
+//
+//   for (let i = 0; i < sentenceArray.length; i++) {
+//     countArray.push(sentenceArray[i].match(/[aeu]+|i|[cts]ia+|e[^o]\W|[ou]+/gi).length);
+//   }
+//   return countArray;
+// }
 
 
 export function countWordsEndingE(text){
@@ -45,8 +45,8 @@ export function updateVowelCount(text) {
   return updatedVowels;
 }
 
-export function validateText(text) {
-  if(text.match(/[^a-z-.,:;!?\s]/gi) !== null){
-    return false;
-  }
-}
+// export function validateText(text) {
+//   if(text.match(/[^a-z-.,:;!?\s]/gi) !== null){
+//     return false;
+//   }
+// }
